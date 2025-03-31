@@ -1,0 +1,15 @@
+
+.register-container {
+    max-width: 600px;
+    background-color: #679cbe;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.background{
+    background-image: url("/home.png");
+    background-size: contain;
+
+}

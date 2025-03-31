@@ -1,0 +1,101 @@
+
+/* Nav Bar */
+.main-nav{
+    background-color: rgb(49, 49, 116) !important;
+}
+.navbar-brand{
+    color: rgb(255, 127, 127) !important;
+    font-size: 50px !important;
+}
+.nav-btn{
+    font-size: 20px !important
+}
+.search-input{
+    size: 20px !important
+}
+
+/* Footer */
+.f-info-links a{
+    text-decoration:none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links{
+    width: 100%;
+}
+.f-info.socials{
+    width:100%;
+    font-size: 1.2rem;
+}
+.f-info.socials a {
+    font-size: 1.2rem;
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+} 
+
+/* card style */
+/* .card{
+    border:none !important;
+    margin-top: 2rem;
+
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+} */
+
+.Category{
+    text-align: center;
+    margin-top: 10px;
+  
+}
+.card{
+    border: none !important;
+    margin-top: 2rem !important;
+    height: 400px !important;
+
+}
+.main-card{
+    padding-bottom: 20px;
+}
+.card-img-top{
+    border-radius: 10px;
+}
+.card:hover{
+    opacity: 0.8;
+    background-color: aliceblue;
+}
+
+.price-country{
+    display: inline-block;
+}
+.card-text p{
+   font-weight: 400;
+}
+
+/* show rout */
+
+.show-img{
+    height: 300px !important;
+    width:500px !important;
+    border: 10px !important;
+}
+.show-div{
+    margin-top: 20px;
+}
+
+.show-detail{
+    padding-left: 70px !important
+}
+

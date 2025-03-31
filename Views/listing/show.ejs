@@ -1,0 +1,45 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+<div class=" mb-3 show-div" >
+  <div class="row g-0">
+    <div  class="col-md-4 show-img-div">
+      <img src="<%=listing.image.url%>"  class="img-fluid rounded-start show-img card" alt="My place">
+    </div>
+  <div class="col-md-8 show-detail">
+    <div class="card-body">
+      <h5 class="card-title"><%=listing.title%></h5><br>
+      <p class="card-text"><%=listing.description%></p>
+      <p> <p style="text-decoration:line-through; display: flex; display: inline;">
+        &#8377;5,000</P> &nbsp;&nbsp;&nbsp;<b>&#8377;&nbsp;<%=listing.price.toLocaleString("en-IN")%></b></p>
+    </div> 
+  
+    <div class="d-flex align-items-center" style="padding-top: 10px;">
+      <label for="book-quantity" class="me-2 mb-0">Quantity:</label>
+      <select id="book-quantity" name="Quantity" class="form-select" style="width: 10%;">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select> 
+    </div>
+
+    
+    <div class="up-de" style="padding-top: 20px;">
+
+      <form method="GET" action="#" class="d-inline" style="margin-right: 15px;">
+        <button class="btn btn-success" >Buy Now</button>
+      </form>
+      <%if(currUser && currUser.username=="Kartikakmar"){%>
+      <form method="GET" action="/listing/<%= listing._id %>/edit" class="d-inline" style="margin-right: 15px;">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+      <form method="POST" action="/listing/<%= listing._id %>?_method=DELETE" class="d-inline">
+        <button type="submit" class="btn btn-danger">Remove</button>
+      </form>
+      <%}%>
+    </div> 
+  </div>
+</div>
+<hr>
+</body>

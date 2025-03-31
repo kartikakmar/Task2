@@ -1,0 +1,82 @@
+<nav class=" main-nav navbar navbar-expand-md bg-light shadow-sm boder-bottom sticky-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold d-flex align-items-center text-dark" href="/">
+            <span class="material-symbols-outlined fs-1 me-2" style="font-size: 80px; color: #eb6942;">import_contacts</span>
+            <span class="fs-4 text-danger-emphasis
+
+            ">Book-Store</span>
+        </a>
+        
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
+            <form class="d-flex col-lg-8 col-md-10 col-sm-12 mx-auto align-items-center">
+                <input class="form-control w-75 rounded-pill px-3 border-0 shadow-sm search-input" type="search" placeholder="Search for books..." aria-label="Search">
+                <button class="btn btn-primary rounded-pill ms-2 px-4 shadow-sm" type="submit">Search</button>
+            </form>
+        
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/">
+                        <span class="material-symbols-outlined fs-2">home</span>
+                        <span class="small">Home</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/listing">
+                        <span class="material-symbols-outlined fs-2">menu_book</span>
+                        <span class="small">Book</span>
+                    </a>
+                </li>
+        
+                <% if (currUser) { %>
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/users/<%= currUser._id %>">
+                        <span class="material-symbols-outlined fs-2">person</span>
+                        <span class="small">Profile</span>
+                    </a>
+                </li>
+                <% } %>
+        
+                <% if (currUser && currUser.username == "Kartikakmar") { %>
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/listing/New">
+                        <span class="material-symbols-outlined fs-2">add_circle</span>
+                        <span class="small">Add Book</span>
+                    </a>
+                </li>
+                <% } %>
+        
+                <% if (!currUser) { %> 
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/users/Signup">
+                        <span class="material-symbols-outlined fs-2">account_circle</span>
+                        <span class="small">Signup</span>
+                    </a>
+                </li>
+        
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/users/Login">
+                        <span class="material-symbols-outlined fs-2">login</span>
+                        <span class="small">Login</span>
+                    </a>
+                </li>
+                <% } else { %>
+                <li class="nav-item me-3 text-center"> 
+                    <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="/logout">
+                        <span class="material-symbols-outlined fs-2">logout</span>
+                        <span class="small">Logout</span>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        
+    </div>
+</nav>

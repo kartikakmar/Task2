@@ -1,0 +1,31 @@
+<%layout("/layouts/boilerplate")%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce</title>
+</head>
+<body>
+    <div class="row row-cols-lg-4 row-cols-md-3 g-4 main-card">
+    <% for(let listing of listings){%> 
+        <div class="col">
+            <div class="card">
+              <a href="http://localhost:8080/listing/<%=listing._id%>">
+              <img src="<%=listing.image.url%>" class="card-img-top" alt="My Image" height="250px">
+              </a>
+               <div class="card-body">
+                <h5 class="card-title"><%=listing.title%></h5>
+                <p>Author:<%=listing.author%></p>
+                <p class="card-text"> &#8377; <%=listing.price.toLocaleString("en-IN")%>/
+                   <i class="tax-info"> +18% GST</i>
+                </p>
+            </div>
+        </div>
+            <button>Add chart</button>
+        </div>  
+    <%}%>         
+    </div>  
+    <hr>  
+</body>
+</html>
